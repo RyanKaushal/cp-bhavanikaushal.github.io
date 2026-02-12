@@ -165,7 +165,6 @@ document.querySelectorAll(".service-item").forEach(item => {
 
       updateCount();
     });
-  };
 
   const statsSection = document.querySelector('.stats-section');
 
