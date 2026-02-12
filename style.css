@@ -1,0 +1,991 @@
+* {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+html {
+
+  scroll-behavior: smooth;
+
+  scroll-padding-top: 120px;  /* 🔥 NEW: Adds 120px padding to prevent header overlap on anchor scrolls */
+
+}
+
+
+
+body {
+
+  background-color: #f8fbfd;
+
+  color: #333;
+
+  line-height: 1.6;
+
+}
+
+
+
+/* ================= HEADER / NAVBAR ================= */
+
+
+
+/* ================= HEADER & NAVBAR ================= */
+
+.header {
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+/* LOGO */
+.logo img {
+  height: 200px;      /* 🔥 CHANGE THIS to resize logo */
+  width: auto;
+  object-fit: contain;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/*  */
+/*  */
+
+
+
+.logo-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+
+.clinic-name {
+
+  font-weight: bold;
+
+  color: #2c7be5;
+
+  font-size: 1.25rem;
+
+  line-height: 1.2;
+
+}
+
+
+
+.doctor-name {
+
+  font-size: 0.85rem;
+
+  color: #666;
+
+}
+
+
+
+/* Nav links aligned to RIGHT */
+
+.nav-links {
+
+  display: flex;
+
+  list-style: none;
+
+  gap: 2rem;
+
+  align-items: center;
+
+  margin-left: auto;          /* 🔥 FIX: forces right alignment */
+
+  justify-content: flex-end;  /* 🔥 NEW: Right-aligns the nav link contents (Home, About, etc.) within the nav-links container */
+
+}
+
+
+
+.nav-links a {
+
+  text-decoration: none;
+
+  color: #444;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+
+}
+
+
+
+.nav-links a:hover {
+
+  color: #2c7be5;
+
+}
+
+
+
+.btn-nav {
+
+  background: #2c7be5;
+
+  color: #fff !important;
+
+  padding: 8px 20px;
+
+  border-radius: 20px;
+
+}
+
+
+
+/* Hamburger */
+
+.menu-toggle {
+
+  display: none;
+
+  font-size: 1.9rem;
+
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+
+  color: #2c7be5;
+
+}
+
+
+
+/* ================= MOBILE NAV ================= */
+
+
+
+@media (max-width: 768px) {
+
+
+
+  .menu-toggle {
+
+    display: block;
+
+    position: absolute;        /* 🔥 NEW: Positions hamburger on the right side */
+
+    right: 5%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+  }
+
+
+
+  .nav-links {
+
+    position: absolute;
+
+    top: 78px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1.2rem 0;
+
+    display: none;             /* ✅ closed by default */
+
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+
+  }
+
+
+
+  .nav-links.active {
+
+    display: flex;
+
+  }
+
+
+
+  .nav-links a {
+
+    font-size: 1.1rem;
+
+    padding: 8px 0;
+
+  }
+
+
+
+  .logo img {
+
+    height: 120px;              /* 🔥 FIX: bigger mobile logo */
+
+  }
+
+
+
+  .clinic-name {
+
+    font-size: 1.05rem;
+
+  }
+
+}
+
+
+
+/* ================= REST OF SITE ================= */
+
+
+
+.whatsapp .btn {
+
+  margin-top: 1.5rem;
+
+  display: inline-block;
+
+}
+
+
+
+.hero {
+
+  padding: 3rem 1rem;
+
+  text-align: center;
+
+  background: linear-gradient(135deg, #e6f2ff, #f4fff8);
+
+}
+
+
+
+.hero h1 {
+
+  font-size: 1.8rem;
+
+  margin-bottom: 1rem;
+
+}
+
+
+
+.hero p {
+
+  max-width: 600px;
+
+  margin: auto;
+
+}
+
+
+
+.hero-buttons {
+
+  margin-top: 1.5rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+
+}
+
+
+
+.btn {
+
+  padding: 0.7rem 1.4rem;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+}
+
+
+
+.primary {
+
+  background: #2c7be5;
+
+  color: #fff;
+
+  border: none;
+
+}
+
+
+
+.secondary {
+
+  background: #2dbf6c;
+
+  color: #fff;
+
+}
+
+
+
+section {
+
+  padding: 3rem 1rem;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+}
+
+
+
+h2 {
+
+  text-align: center;
+
+  margin-bottom: 2rem;
+
+  color: #2c7be5;
+
+}
+
+
+
+.about p {
+
+  max-width: 800px;
+
+  margin: auto;
+
+  margin-bottom: 1rem;
+
+  text-align: center;
+
+}
+
+
+
+.service-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 1rem;
+
+}
+
+
+
+/* testing */
+
+.service-item {
+
+  cursor: pointer;
+
+  transition: all 0.3s ease; /* Smooth expansion */
+
+}
+
+
+
+.service-item.expanded {
+
+  /* Optional: Change background or add shadow when expanded */
+
+  background: #f0f8ff; /* Light blue tint for emphasis */
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Deeper shadow */
+
+}
+
+
+
+.service-article {
+
+  display: none; /* Hidden by default */
+
+  margin-top: 1rem;
+
+  padding: 1rem;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  border: 1px solid #e0e0e0;
+
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+
+  color: #333;
+
+}
+
+
+
+.service-item.expanded .service-article {
+
+  display: block; /* Show when expanded */
+
+}
+
+
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+
+  .service-article {
+
+    font-size: 0.85rem;
+
+    padding: 0.8rem;
+
+  }
+
+}
+
+/* testing */
+
+.card {
+
+  background: #ffffff;
+
+  padding: 1.5rem;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+}
+
+
+
+.video-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 1rem;
+
+}
+
+
+
+iframe {
+
+  width: 100%;
+
+  height: 200px;
+
+  border-radius: 12px;
+
+}
+
+
+
+.appointment form {
+
+  max-width: 500px;
+
+  margin: auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.8rem;
+
+}
+
+
+
+input, textarea {
+
+  padding: 0.7rem;
+
+  border-radius: 8px;
+
+  border: 1px solid #ccc;
+
+}
+
+
+
+textarea {
+
+  resize: vertical;
+
+  min-height: 100px;
+
+}
+
+
+
+.status {
+
+  text-align: center;
+
+  margin-top: 0.5rem;
+
+}
+
+
+
+.whatsapp {
+
+  text-align: center;
+
+  background: #f0faf5;
+
+  border-radius: 12px;
+
+}
+
+
+
+.contact {
+
+  text-align: center;
+
+}
+
+
+
+.disclaimer {
+
+  font-size: 0.85rem;
+
+  color: #666;
+
+  margin-top: 1rem;
+
+}
+
+
+
+.footer {
+
+  background: #ffffff;
+
+  text-align: center;
+
+  padding: 1.5rem 1rem;
+
+  font-size: 0.85rem;
+
+  border-top: 1px solid #eee;
+
+}
+
+
+
+@media (min-width: 768px) {
+
+  .hero h1 {
+
+    font-size: 2.4rem;
+
+  }
+
+}
+
+
+
+/* Modal Overlay */
+
+.modal {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+
+  display: none; /* Hidden by default */
+
+  z-index: 2000; /* Above everything else */
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+
+.modal.active {
+
+  display: flex; /* Show when active */
+
+}
+
+
+
+/* Modal Content Container */
+
+.modal-content {
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  width: 90%;
+
+  max-width: 800px;
+
+  max-height: 80vh;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  position: relative;
+
+}
+
+
+
+/* Close Button (X) */
+
+.close-btn {
+
+  position: absolute;
+
+  top: 10px;
+
+  right: 15px;
+
+  font-size: 2rem;
+
+  color: #666;
+
+  cursor: pointer;
+
+  background: none;
+
+  border: none;
+
+  z-index: 10;
+
+}
+
+
+
+.close-btn:hover {
+
+  color: #2c7be5;
+
+}
+
+
+
+/* Iframe for Article */
+
+.modal-iframe {
+
+  width: 100%;
+
+  height: 450px; /* Adjustable height */
+
+  border: none;
+
+  border-radius: 0 0 12px 12px;
+
+}
+
+
+
+/* WhatsApp Link in Modal */
+
+.modal-whatsapp {
+
+  padding: 1rem;
+
+  text-align: center;
+
+  background: #f0faf5;
+
+  border-top: 1px solid #e0e0e0;
+
+}
+
+
+
+.modal-whatsapp a {
+
+  color: #2dbf6c;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+}
+
+
+
+.modal-whatsapp a:hover {
+
+  /* text-decoration: underline; */
+
+  margin: 0; /* Remove default margin */
+
+}
+
+
+
+/* Mobile Adjustments */
+
+@media (max-width: 768px) {
+
+  .modal-content {
+
+    width: 95%;
+
+    max-height: 90vh;
+
+  }
+
+
+
+  .modal-iframe {
+
+    height: 300px;
+
+  }
+
+
+
+  .close-btn {
+
+    font-size: 1.5rem;
+
+  }
+
+
+}
+/* ================= CLINIC IMAGES ================= */
+
+.clinic-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.clinic-images img {
+  width: 320px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease;
+}
+
+.clinic-images img:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .clinic-images {
+    flex-direction: column;
+  }
+
+  .clinic-images img {
+    width: 95%;
+    height: 220px;
+  }
+}
+.map-link {
+  text-align: center;
+  margin: 20px auto 10px;
+}
+
+.map-link a {
+  display: inline-block;
+  background: #f0f8ff;
+  color: #2c7be5;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid #cfe2ff;
+  transition: all 0.25s ease;
+}
+
+.map-link a:hover {
+  background: #2c7be5;
+  color: #ffffff;
+}
+.schedule-btn {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 16px 20px;
+
+  background-color: #0a67b3;
+  color: #ffffff;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: 0 6px 18px rgba(10, 103, 179, 0.25);
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.schedule-btn:hover {
+  background-color: #084f8a;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(10, 103, 179, 0.35);
+}
+
+/* Active (click) */
+.schedule-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(10, 103, 179, 0.25);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .schedule-btn {
+    font-size: 1rem;
+    padding: 14px 18px;
+    max-width: 90%;
+  }
+}
+
+.hero-tagline {
+  max-width: 700px;
+  margin: 20px auto 0;
+  line-height: 1.6;
+}
+
+
+.hero-text {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+}
+
+.doctor-name {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.doctor-meta {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.doctor-meta .divider {
+  margin: 0 8px;
+  color: #bbb;
+}
+
+.divider {
+  margin: 0 10px;
+  opacity: 0.5;
+}
+
+
+.clinic-name {
+  color: #2c7be5;
+  font-weight: 600;
+}
+
+.hero-tagline {
+  max-width: 720px;          /* controls line length */
+  margin: 22px auto 0;       /* balanced spacing from meta line */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
