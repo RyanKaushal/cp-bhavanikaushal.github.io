@@ -76,272 +76,100 @@ body {
   width: 100%;
   top: 0;
   z-index: 1000;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  justify-content: space-between;
+  padding: 14px 60px;
 }
 
 /* LOGO */
 .logo img {
-  height: 200px;      /* 🔥 CHANGE THIS to resize logo */
+  height: 55px;   /* Fixed professional size */
   width: auto;
-  object-fit: contain;
 }
 
 /* NAV LINKS */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 24px;
+  gap: 28px;
+  align-items: center;
+  margin-left: auto;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #222;
+  color: #333;
   font-weight: 500;
+  transition: 0.3s ease;
 }
 
-/* HAMBURGER */
+.nav-links a:hover {
+  color: #2c7be5;
+}
+
+/* NAV BUTTON (Book Appointment / Contact etc) */
+.btn-nav {
+  background: #2c7be5;
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 25px;
+}
+
+/* HAMBURGER MENU */
 .menu-toggle {
   display: none;
   font-size: 26px;
   background: none;
   border: none;
   cursor: pointer;
-}
-
-
-/*  */
-/*  */
-
-
-
-.logo-text {
-
-  display: flex;
-
-  flex-direction: column;
-
-}
-
-
-
-.clinic-name {
-
-  font-weight: bold;
-
   color: #2c7be5;
-
-  font-size: 1.25rem;
-
-  line-height: 1.2;
-
 }
-
-
-
-.doctor-name {
-
-  font-size: 0.85rem;
-
-  color: #666;
-
-}
-
-
-
-/* Nav links aligned to RIGHT */
-
-.nav-links {
-
-  display: flex;
-
-  list-style: none;
-
-  gap: 2rem;
-
-  align-items: center;
-
-  margin-left: auto;          /* 🔥 FIX: forces right alignment */
-
-  justify-content: flex-end;  /* 🔥 NEW: Right-aligns the nav link contents (Home, About, etc.) within the nav-links container */
-
-}
-
-
-
-.nav-links a {
-
-  text-decoration: none;
-
-  color: #444;
-
-  font-weight: 500;
-
-  transition: 0.3s;
-
-}
-
-
-
-.nav-links a:hover {
-
-  color: #2c7be5;
-
-}
-
-
-
-.btn-nav {
-
-  background: #2c7be5;
-
-  color: #fff !important;
-
-  padding: 8px 20px;
-
-  border-radius: 20px;
-
-}
-
-
-
-/* Hamburger */
-
-.menu-toggle {
-
-  display: none;
-
-  font-size: 1.9rem;
-
-  background: none;
-
-  border: none;
-
-  cursor: pointer;
-
-  color: #2c7be5;
-
-}
-
-
 
 /* ================= MOBILE NAV ================= */
 
-
-
 @media (max-width: 768px) {
 
-
+  .navbar {
+    padding: 12px 20px;
+  }
 
   .menu-toggle {
-
     display: block;
-
-    position: absolute;        /* 🔥 NEW: Positions hamburger on the right side */
-
-    right: 5%;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
   }
-
-
 
   .nav-links {
-
     position: absolute;
-
-    top: 78px;
-
+    top: 70px;
     left: 0;
-
     width: 100%;
-
     background: #ffffff;
-
     flex-direction: column;
-
     align-items: center;
-
-    gap: 1rem;
-
-    padding: 1.2rem 0;
-
-    display: none;             /* ✅ closed by default */
-
+    gap: 1.2rem;
+    padding: 20px 0;
+    display: none;
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-
   }
-
-
 
   .nav-links.active {
-
     display: flex;
-
   }
-
-
 
   .nav-links a {
-
-    font-size: 1.1rem;
-
-    padding: 8px 0;
-
-  }
-
-
-
-  .logo img {
-
-    height: 120px;              /* 🔥 FIX: bigger mobile logo */
-
-  }
-
-
-
-  .clinic-name {
-
     font-size: 1.05rem;
-
   }
-
 }
 
-
-
-/* ================= REST OF SITE ================= */
-
-
-
-.whatsapp .btn {
-
-  margin-top: 1.5rem;
-
-  display: inline-block;
-
-}
-
-
+/* ================= HERO SPACING FIX ================= */
 
 .hero {
-
-  padding: 3rem 1rem;
-
-  text-align: center;
-
-  background: linear-gradient(135deg, #e6f2ff, #f4fff8);
-
+  margin-top: 90px; /* Prevent content hiding behind fixed navbar */
 }
 
 
