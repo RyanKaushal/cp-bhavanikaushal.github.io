@@ -138,6 +138,50 @@ document.querySelectorAll(".service-item").forEach(item => {
     });
   });
 });
+    /* ===============================
+     Stats Counter Animation
+     =============================== */
+
+  const counters = document.querySelectorAll('.counter');
+  let statsStarted = false;
+
+  const startCounting = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const duration = 2000;
+      const increment = target / (duration / 16);
+      let count = 0;
+
+      const updateCount = () => {
+        count += increment;
+
+        if (count < target) {
+          counter.innerText = Math.floor(count);
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target + "+";
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  const statsSection = document.querySelector('.stats-section');
+
+  if (statsSection) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !statsStarted) {
+          startCounting();
+          statsStarted = true;
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(statsSection);
+  }
+
 });
 
 
