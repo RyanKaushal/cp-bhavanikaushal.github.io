@@ -138,48 +138,48 @@ document.querySelectorAll(".service-item").forEach(item => {
     });
   });
 });
-    /* ===============================
-     Stats Counter Animation
-     =============================== */
+   /* ===============================
+   Stats Counter Animation
+   =============================== */
 
-  const counters = document.querySelectorAll('.counter');
-  let statsStarted = false;
+const counters = document.querySelectorAll(".counter");
 
-  const startCounting = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const duration = 2000;
-      const increment = target / (duration / 16);
-      let count = 0;
+const startCounting = () => {
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute("data-target"));
+    let count = 0;
 
-      const updateCount = () => {
+    const updateCount = () => {
+      const increment = Math.ceil(target / 100);
+
+      if (count < target) {
         count += increment;
+        counter.innerText = count;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
 
-        if (count < target) {
-          counter.innerText = Math.floor(count);
-          requestAnimationFrame(updateCount);
-        } else {
-          counter.innerText = target + "+";
-        }
-      };
+    updateCount();
+  });
+};
 
-      updateCount();
+const statsSection = document.querySelector(".stats-section");
+
+if (statsSection) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounting();
+        observer.unobserve(statsSection); // run once only
+      }
     });
+  });
 
-  const statsSection = document.querySelector('.stats-section');
+  observer.observe(statsSection);
+}
 
-  if (statsSection) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !statsStarted) {
-          startCounting();
-          statsStarted = true;
-        }
-      });
-    }, { threshold: 0.5 });
-
-    observer.observe(statsSection);
-  }
 
 });
 
