@@ -32,22 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+
   /* ===============================
-     Mobile Navbar Toggle (FIXED)
+     Mobile Navbar Toggle
      =============================== */
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
 
   if (menuToggle && navLinks) {
 
-    // 🔑 FORCE MENU CLOSED ON LOAD
     navLinks.classList.remove("active");
 
     menuToggle.addEventListener("click", function () {
       navLinks.classList.toggle("active");
     });
 
-    // Optional: close menu when link is clicked (recommended)
     navLinks.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -55,133 +54,114 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+
   /* ===============================
- Services → Open Article in Modal Iframe
-============================== */
-document.querySelectorAll(".service-item").forEach(item => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
+     Services → Open Article in Modal
+     =============================== */
+  document.querySelectorAll(".service-item").forEach(item => {
 
-    // Get the article content from the hidden div
-    const articleDiv = item.querySelector(".service-article");
-    if (!articleDiv) return; // No article, skip
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
 
-    let articleHTML = articleDiv.innerHTML; // Get the article's HTML
+      const articleDiv = item.querySelector(".service-article");
+      if (!articleDiv) return;
 
-    // Remove the last <p> (WhatsApp link) from the article
-    const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = articleHTML;
-    const paragraphs = tempDiv.querySelectorAll("p");
-    if (paragraphs.length > 0) {
-      paragraphs[paragraphs.length - 1].remove(); // Remove the last paragraph (WhatsApp link)
-    }
-    articleHTML = tempDiv.innerHTML; // Updated HTML without the link
+      let articleHTML = articleDiv.innerHTML;
 
-    // Create modal elements
-    const modal = document.createElement("div");
-    modal.className = "modal active";
+      // Remove last paragraph (WhatsApp link)
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = articleHTML;
+      const paragraphs = tempDiv.querySelectorAll("p");
 
-    const modalContent = document.createElement("div");
-    modalContent.className = "modal-content";
+      if (paragraphs.length > 0) {
+        paragraphs[paragraphs.length - 1].remove();
+      }
 
-    const closeBtn = document.createElement("button");
-    closeBtn.className = "close-btn";
-    closeBtn.innerHTML = "&times;"; // X symbol
-    closeBtn.addEventListener("click", () => {
-      modal.remove(); // Close modal
+      articleHTML = tempDiv.innerHTML;
+
+      // Create Modal Overlay
+      const modal = document.createElement("div");
+      modal.className = "modal active";
+
+      // Modal Content Container
+      const modalContent = document.createElement("div");
+      modalContent.className = "modal-content";
+
+      // Close Button
+      const closeBtn = document.createElement("button");
+      closeBtn.className = "close-btn";
+      closeBtn.innerHTML = "&times;";
+
+      closeBtn.addEventListener("click", function () {
+        document.body.removeChild(modal);
+        document.body.style.overflow = "auto";
+      });
+
+      // Close when clicking outside modal content
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          document.body.removeChild(modal);
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // Content Wrapper
+      const contentWrapper = document.createElement("div");
+      contentWrapper.style.padding = "30px";
+      contentWrapper.style.maxHeight = "70vh";
+      contentWrapper.style.overflowY = "auto";
+      contentWrapper.innerHTML = articleHTML;
+
+      // Append Elements
+      modalContent.appendChild(closeBtn);
+      modalContent.appendChild(contentWrapper);
+      modal.appendChild(modalContent);
+      document.body.appendChild(modal);
+
+      // Prevent background scroll
+      document.body.style.overflow = "hidden";
     });
 
-    const iframe = document.createElement("iframe");
-    iframe.className = "modal-iframe";
-    // Load article into iframe with a button at the bottom
-    iframe.srcdoc = `
-      <html>
-        <head>
-          <style>
-            body { font-family: Arial, sans-serif; padding: 1rem; line-height: 1.5; color: #333; }
-            a { color: #2c7be5; }
-            .btn { padding: 0.7rem 1.4rem; border-radius: 30px; text-decoration: none; font-size: 0.9rem; cursor: pointer; border: none; display: inline-block; }
-            .secondary { background: #2dbf6c; color: #fff; }
-            .modal-whatsapp-btn { margin-top: 1rem; display: block; width: 100%; text-align: center; }
-          </style>
-        </head>
-        <body>
-          ${articleHTML}
-          <div class="modal-whatsapp-btn">
-            <button class="btn secondary" onclick="window.open('https://wa.me/917017784451?text=Hello%20Doctor%2C%20I%20would%20like%20to%20consult%20regarding%20${item.getAttribute('data-issue')}.%20Please%20let%20me%20know%20the%20available%20appointment%20timings.', '_blank'); window.parent.postMessage('closeModal', '*');">Contact on WhatsApp</button>
-          </div>
-        </body>
-      </html>
-    `;
+  });
 
-    // Assemble modal
-    modalContent.appendChild(closeBtn);
-    modalContent.appendChild(iframe);
-    modal.appendChild(modalContent);
-    document.body.appendChild(modal);
 
-    // Listen for message to close modal
-    const messageHandler = (event) => {
-      if (event.data === 'closeModal') {
-        modal.remove();
-        window.removeEventListener('message', messageHandler);
-      }
-    };
-    window.addEventListener('message', messageHandler);
+  /* ===============================
+     Counter Animation (Stats Section)
+     =============================== */
+  const counters = document.querySelectorAll(".counter");
 
-    // Close modal on background click
-    modal.addEventListener("click", (event) => {
-      if (event.target === modal) {
-        modal.remove();
-        window.removeEventListener('message', messageHandler);
-      }
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const increment = target / 200;
+
+      const updateCounter = () => {
+        const current = +counter.innerText;
+
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(updateCounter, 10);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+
+      updateCounter();
     });
-  });
-});
-   /* ===============================
-   Stats Counter Animation
-   =============================== */
+  };
 
-const counters = document.querySelectorAll(".counter");
+  // Trigger animation when visible
+  const statsSection = document.querySelector(".stats-section");
 
-const startCounting = () => {
-  counters.forEach(counter => {
-    const target = parseInt(counter.getAttribute("data-target"));
-    let count = 0;
-
-    const updateCount = () => {
-      const increment = Math.ceil(target / 100);
-
-      if (count < target) {
-        count += increment;
-        counter.innerText = count;
-        setTimeout(updateCount, 20);
-      } else {
-        counter.innerText = target + "+";
+  if (statsSection) {
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        animateCounters();
+        observer.disconnect();
       }
-    };
+    }, { threshold: 0.4 });
 
-    updateCount();
-  });
-};
-
-const statsSection = document.querySelector(".stats-section");
-
-if (statsSection) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startCounting();
-        observer.unobserve(statsSection); // run once only
-      }
-    });
-  });
-
-  observer.observe(statsSection);
-}
-
+    observer.observe(statsSection);
+  }
 
 });
-
-
-
