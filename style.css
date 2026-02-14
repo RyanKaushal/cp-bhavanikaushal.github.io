@@ -65,7 +65,28 @@ body {
 
 
 
-/* ================= HEADER / NAVBAR ================= */
+/* ================= Book now button ================= */
+
+/* HERO BOOK BUTTON */
+
+.hero-book-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid #2c7be5;
+  color: #2c7be5;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.hero-book-btn:hover {
+  background: #2c7be5;
+  color: #ffffff;
+}
+
 
 
 
