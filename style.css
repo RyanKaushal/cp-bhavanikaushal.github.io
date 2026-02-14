@@ -198,8 +198,10 @@ body {
 
 /* ================= HERO SECTION ================= */
 .hero {
+  width: 100%;
+  min-height: 100vh;
   padding-top: 150px;
-  padding: 80px 60px;
+  padding: 150px 60px 80px 60px; /* keeps your top spacing */
   background: url("images/hero-bg.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
