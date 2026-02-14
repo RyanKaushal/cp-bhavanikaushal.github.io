@@ -168,45 +168,107 @@ body {
 
 /* ================= HERO SPACING FIX ================= */
 
+/* ================= HERO SECTION ================= */
+
 .hero {
-  margin-top: 90px; /* Prevent content hiding behind fixed navbar */
+  margin-top: 90px;
+  padding: 80px 60px;
+  background: #f8fbff;
+  position: relative;
+  overflow: hidden;
 }
 
-
-
-.hero h1 {
-
-  font-size: 1.8rem;
-
-  margin-bottom: 1rem;
-
-}
-
-
-
-.hero p {
-
-  max-width: 600px;
-
-  margin: auto;
-
-}
-
-
-
-.hero-buttons {
-
-  margin-top: 1.5rem;
-
+.hero-content {
   display: flex;
-
-  justify-content: center;
-
-  gap: 1rem;
-
-  flex-wrap: wrap;
-
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
+
+/* LEFT TEXT */
+.hero-text {
+  flex: 1;
+  z-index: 2;
+}
+
+.doctor-name {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.doctor-meta {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+/* RIGHT IMAGE */
+.hero-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  opacity: 0.95;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn.primary {
+  background: #2c7be5;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.btn.secondary {
+  background: #25D366;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .doctor-name {
+    font-size: 2rem;
+  }
+}
+
 
 
 
