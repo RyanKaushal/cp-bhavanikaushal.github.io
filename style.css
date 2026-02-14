@@ -198,7 +198,8 @@ body {
 .hero {
   padding-top: 150px;
   padding: 80px 60px;
-  background: #f8fbff;
+  background: url("images/hero-bg.jpg") no-repeat center center;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 }
