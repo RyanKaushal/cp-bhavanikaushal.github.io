@@ -205,10 +205,19 @@ body {
 .hero {
   margin-top: 90px;
   padding: 80px 60px;
+  position: relative;
+  overflow: hidden;
+
+  background: url("images/hero-bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+/* .hero {
+  margin-top: 90px;
+  padding: 80px 60px;
   background: #f8fbff;
   position: relative;
   overflow: hidden;
-}
+} */
 
 .hero-content {
   display: flex;
