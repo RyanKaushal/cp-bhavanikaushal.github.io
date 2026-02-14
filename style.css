@@ -71,6 +71,12 @@ body {
 }
 /* about section */
 
+.about {
+  background: linear-gradient(to right, #f8fbfc, #eef7f8);
+  padding: 80px 0;
+}
+
+
 .about .elementor-heading-title {
   text-transform: none;
   letter-spacing: 1px;
