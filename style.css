@@ -69,6 +69,42 @@ body {
   line-height: 1.6;
 
 }
+/* about section */
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.about-content {
+  flex: 1.5;
+}
+@media (max-width: 768px) {
+
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 280px;
+    margin-bottom: 2rem;
+  }
+
+}
+
+
+/*  */
 
 
 
