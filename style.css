@@ -480,6 +480,7 @@ h2 {
 /* testing */
 
 .card {
+  display: flow
 
   background: #ffffff;
 
