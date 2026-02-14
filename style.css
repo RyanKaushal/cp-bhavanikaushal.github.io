@@ -347,7 +347,7 @@ body {
 
 
 
-section {
+/* section {
 
   padding: 3rem 1rem;
 
@@ -355,7 +355,17 @@ section {
 
   margin: auto;
 
+} */
+section {
+  padding: 3rem 0;
+  width: 100%;
 }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 
 
 
