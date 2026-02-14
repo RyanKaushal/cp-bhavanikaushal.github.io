@@ -262,7 +262,7 @@ body {
 
 /* BUTTONS */
 .hero-buttons {
-  display: flex;
+  display: grid-lanes;
   gap: 15px;
   margin-top: 40px;
 }
