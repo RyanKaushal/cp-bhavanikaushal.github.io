@@ -70,12 +70,13 @@ body {
 
 }
 /* about section */
+
 .elementor-945 .elementor-element.elementor-element-7186e15 .elementor-heading-title {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #1DBFC1;
+text-transform: none;
+letter-spacing: 1px;
+font-weight: 500;
+color: #1DBFC1;
+font-size: 15px;
 }
 
 .about-wrapper {
