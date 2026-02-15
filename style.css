@@ -485,13 +485,22 @@ h2 {
 .service-icon {
   width: 35px;
   height: 35px;
-  background: rgba(29,191,193,0.12);
+  background: transparent;
+  /* background: rgba(29,191,193,0.12); */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 12px;
-  color: #1DBFC1;
+  /* color: #1DBFC1; */
+}
+
+/* Style for the actual image icon */
+.custom-icon {
+  width: 100%;          /* Fills the container */
+  height: 100%;         /* Fills the container */
+  object-fit: contain;  /* Ensures the image doesn't stretch or distort */
+  opacity: 0.9;         /* Optional: makes it look more subtle/elegant */
 }
 
 .service-toggle i {
