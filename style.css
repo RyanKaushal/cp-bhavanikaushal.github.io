@@ -546,10 +546,13 @@ h2 {
 .service-grid {
 
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* Increased gap for a more "breathable", elegant feel */
+  align-items: start;
 
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
 
-  gap: 1rem; 
+  /* gap: 1rem;  */
 
 } 
 
