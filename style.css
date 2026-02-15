@@ -566,6 +566,7 @@ h2 {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem; /* Increased gap for a more "breathable", elegant feel */
   align-items: stretch;
+  background: transparent;
   
 
   /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
