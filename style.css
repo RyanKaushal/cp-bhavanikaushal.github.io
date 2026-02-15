@@ -447,13 +447,16 @@ h2 {
 
 /* testing grid */
 .services-section {
-  padding: 120px 0;
-  background: #f4f9fa;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for 3 rows */
+  gap: 20px; /* Space between hexagons */
+  justify-items: center;
+  align-items: start; /* Align to top for varying string lengths */
+  margin: 50px auto;
+  max-width: 1200px; /* Prevent overflow on wide screens */
+  padding: 0 20px;
 }
 
-/* Wrapper */
 .hanger {
   position: relative;
   display: flex;
@@ -461,46 +464,71 @@ h2 {
   align-items: center;
 }
 
-/* String */
 .string {
+  display: block;
   width: 2px;
-  height: 80px;
-  background: #bbb;
+  background-color: #000; /* Black string */
+  margin-bottom: 10px;
 }
 
-/* Pentagon Shape */
-.pentagon-container {
-  width: 900px;
-  padding: 80px 60px;
-  background: white;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+/* Varying string lengths */
+.string-short { height: 30px; }
+.string-medium { height: 50px; }
+.string-long { height: 70px; }
 
-  clip-path: polygon(
-    50% 0%, 
-    100% 35%, 
-    82% 100%, 
-    18% 100%, 
-    0% 35%
-  );
-
-  border-radius: 20px;
-}
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+.hexagon-container {
+  clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%); /* Hexagon shape */
+  background-color: #f0f0f0; /* Light background */
+  width: 120px; /* Smaller size */
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transform: rotate(2deg); /* Slight tilt for hanging effect */
+  transition: transform 0.3s ease;
 }
 
-.pentagon-container {
-  animation: float 6s ease-in-out infinite;
+.hanger:hover .hexagon-container {
+  transform: rotate(5deg); /* Swing on hover */
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(10px); }
-  100% { transform: translateY(0px); }
+.service-card {
+  text-align: center;
+  width: 100%;
 }
 
+/* Existing styles for header, icon, toggle, article (unchanged) */
+.service-header {
+  /* Your existing styles */
+}
+
+.service-icon {
+  /* Your existing styles */
+}
+
+.service-toggle {
+  cursor: pointer;
+  /* Your existing styles */
+}
+
+.service-article {
+  /* Your existing styles */
+}
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 768px) {
+  .services-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    grid-template-columns: 1fr; /* 1 column on phones */
+  }
+}
 
 /* test ends */
 
