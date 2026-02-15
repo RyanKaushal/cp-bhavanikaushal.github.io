@@ -445,7 +445,7 @@ h2 {
 
 }
 
-/* testing grip */
+/* testing grid */
 .services-section {
   padding: 120px 0;
   background: #f4f9fa;
@@ -485,6 +485,12 @@ h2 {
 
   border-radius: 20px;
 }
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
 /* test ends */
 
 .services {
@@ -586,7 +592,7 @@ h2 {
 }
 
 
-.service-grid {
+/* .service-grid {
 
   display: grid;
 
@@ -594,7 +600,7 @@ h2 {
 
   gap: 1rem;
 
-}
+} */
 
 
 
