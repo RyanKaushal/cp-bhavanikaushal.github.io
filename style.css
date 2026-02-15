@@ -494,7 +494,11 @@ h2 {
   margin-right: 12px;
   /* color: #1DBFC1; */
 }
-
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the image from stretching */
+}
 /* Style for the actual image icon */
 .custom-icon {
   width: 100%;          /* Fills the container */
