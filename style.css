@@ -445,6 +445,48 @@ h2 {
 
 }
 
+/* testing grip */
+.services-section {
+  padding: 120px 0;
+  background: #f4f9fa;
+  display: flex;
+  justify-content: center;
+}
+
+/* Wrapper */
+.hanger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* String */
+.string {
+  width: 2px;
+  height: 80px;
+  background: #bbb;
+}
+
+/* Pentagon Shape */
+.pentagon-container {
+  width: 900px;
+  padding: 80px 60px;
+  background: white;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+
+  clip-path: polygon(
+    50% 0%, 
+    100% 35%, 
+    82% 100%, 
+    18% 100%, 
+    0% 35%
+  );
+
+  border-radius: 20px;
+}
+/* test ends */
+
 .services {
   padding: 100px 0;
   background: linear-gradient(to bottom, #f8fbfc, #eef5f6);
