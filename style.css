@@ -448,12 +448,13 @@ h2 {
 /* testing grid */
 .services-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for 3 rows */
-  gap: 20px; /* Space between hexagons */
-  justify-items: center;
-  align-items: start; /* Align to top for varying string lengths */
+  grid-template-columns: repeat(3, 120px); /* 3 columns, fixed width for hexagons */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  gap: 10px; /* Small gap for honeycomb snugness */
+  justify-content: center;
+  align-items: start;
   margin: 50px auto;
-  max-width: 1200px; /* Prevent overflow on wide screens */
+  max-width: 500px; /* Constrain width to fit honeycomb */
   padding: 0 20px;
 }
 
@@ -464,10 +465,14 @@ h2 {
   align-items: center;
 }
 
+.offset {
+  transform: translateX(60px); /* Shift right by half hexagon width for honeycomb offset */
+}
+
 .string {
   display: block;
   width: 2px;
-  background-color: #000; /* Black string */
+  background-color: #000;
   margin-bottom: 10px;
 }
 
@@ -477,21 +482,21 @@ h2 {
 .string-long { height: 70px; }
 
 .hexagon-container {
-  clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%); /* Hexagon shape */
-  background-color: #f0f0f0; /* Light background */
-  width: 120px; /* Smaller size */
+  clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+  background-color: #f0f0f0;
+  width: 120px;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   box-sizing: border-box;
-  transform: rotate(2deg); /* Slight tilt for hanging effect */
+  transform: rotate(2deg);
   transition: transform 0.3s ease;
 }
 
 .hanger:hover .hexagon-container {
-  transform: rotate(5deg); /* Swing on hover */
+  transform: rotate(5deg);
 }
 
 .service-card {
@@ -517,19 +522,17 @@ h2 {
   /* Your existing styles */
 }
 
-/* Responsive: Stack on smaller screens */
+/* Responsive: Stack vertically on smaller screens */
 @media (max-width: 768px) {
   .services-section {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: none;
+    gap: 20px;
+  }
+  .offset {
+    transform: none; /* Remove offset on mobile */
   }
 }
-
-@media (max-width: 480px) {
-  .services-section {
-    grid-template-columns: 1fr; /* 1 column on phones */
-  }
-}
-
 /* test ends */
 
 .services {
