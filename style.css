@@ -655,7 +655,7 @@ h2 {
 /* testing */
 
 .card {
-  display: flow
+  display: contents
 
   background: #ffffff;
 
