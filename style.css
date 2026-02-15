@@ -451,22 +451,27 @@ h2 {
 
 .service-item {
   background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  border-radius: 12px; /* Slightly tighter corners look more modern */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04); /* Softer shadow reduces visual "weight" */
   transition: all 0.3s ease;
   overflow: hidden;
-  margin-bottom: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Keeps all cards in a row the same height */
+  border: 1px solid #edf2f7;
 }
 
 .service-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(44, 123, 229, 0.1);
 }
 
 .service-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 30px;
+  padding: 15px 20px; /* Reduced from 25px 30px */
   cursor: pointer;
 }
 
@@ -478,14 +483,14 @@ h2 {
 }
 
 .service-icon {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   background: rgba(29,191,193,0.12);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 15px;
+  margin-right: 12px;
   color: #1DBFC1;
 }
 
@@ -498,11 +503,23 @@ h2 {
   transform: rotate(45deg);
 }
 
+/* .service-article {
+  padding: 0 20px 20px 20px; /* Reduced from 30px */
+  font-size: 14px; /* Slightly smaller for elegance */
+  line-height: 1.5;
+} */
 .service-article {
-  padding: 0 30px 30px 30px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #555;
+  display: none; /* Keeps it hidden until clicked */
+  padding: 0 20px 20px 20px; /* Tightened padding to reduce length */
+  font-size: 14px; /* Slightly smaller for a cleaner look */
+  line-height: 1.5;
+  color: #444;
+  background: #fff;
+}
+
+/* This ensures that when it expands, it doesn't push the card too far */
+.service-item.expanded .service-article {
+  display: block;
 }
 
 
@@ -547,8 +564,9 @@ h2 {
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem; /* Increased gap for a more "breathable", elegant feel */
-  align-items: start;
+  gap: 1.5rem; /* Increased gap for a more "breathable", elegant feel */
+  align-items: stretch;
+  
 
   /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
 
@@ -582,7 +600,7 @@ h2 {
 
 
 
-.service-article {
+/* .service-article {
 
   display: none; /* Hidden by default */
 
@@ -602,14 +620,19 @@ h2 {
 
   color: #333;
 
+} */
+
+
+.service-article p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Shows only 3 lines of text */
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  margin-bottom: 10px;
 }
-
-
-
-.service-item.expanded .service-article {
-
-  display: block; /* Show when expanded */
-
+.service-item.expanded .service-article p {
+  display: block;
+  overflow: visible;
 }
 
 
