@@ -445,7 +445,7 @@ h2 {
 
 }
 /* SERVICES SECTION */
-#services {
+.services {
   position: relative;
   background: 
     linear-gradient(
