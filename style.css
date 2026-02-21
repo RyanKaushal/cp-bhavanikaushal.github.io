@@ -477,10 +477,10 @@ h2 {
 /* SERVICES SECTION */
 .services {
   position: relative;
-  background: 
+  background:
     linear-gradient(
-      rgba(255, 255, 255, 0.85),
-      rgba(255, 255, 255, 0.9)
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.95)
     ),
     url("images/services-background.png");
   background-size: cover;
@@ -492,14 +492,13 @@ h2 {
 
 .service-item {
   background: transparent;
-  border-radius: 12px; /* Slightly tighter corners look more modern */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.04); /* Softer shadow reduces visual "weight" */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
   transition: all 0.3s ease;
   overflow: hidden;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Keeps all cards in a row the same height */
   border: 1px solid #edf2f7;
 }
 
@@ -615,19 +614,11 @@ h2 {
 
 
 .service-grid {
-
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem; /* Increased gap for a more "breathable", elegant feel */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   align-items: stretch;
-  background: transparent;
-  
-
-  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
-
-  /* gap: 1rem;  */
-
-} 
+}
 
 
 
@@ -655,28 +646,28 @@ h2 {
 
 
 
-/* .service-article {
-
-  display: none; /* Hidden by default */
-
-  margin-top: 1rem;
-
-  padding: 1rem;
-
-  background: #ffffff;
-
-  border-radius: 8px;
-
-  border: 1px solid #e0e0e0;
-
-  font-size: 0.9rem;
-
+.service-article {
+  display: none;
+  padding: 0 20px 20px;
+  font-size: 14px;
   line-height: 1.5;
-
-  color: #333;
-
+  color: #444;
+  background: #fff;
+}
+/* 
+.service-item.expanded .service-article {
+  display: block;
 } */
 
+@media (max-width: 768px) {
+  .service-header h4 {
+    font-size: 14px;
+  }
+
+  .service-article {
+    font-size: 0.9rem;
+  }
+}
 
 .service-article p {
   display: -webkit-box;
@@ -685,10 +676,10 @@ h2 {
   overflow: hidden;
   margin-bottom: 10px;
 }
-.service-item.expanded .service-article p {
+/* .service-item.expanded .service-article p {
   display: block;
   overflow: visible;
-}
+} */
 
 
 
