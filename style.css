@@ -750,6 +750,18 @@ iframe {
 
 }
 
+.contact {
+  text-align: left;
+}
+
+.contact .section-subtitle {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  line-height: 1.7;
+}
+
 
 
 .appointment form {
