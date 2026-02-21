@@ -692,6 +692,9 @@ h2 {
 
 }
 
+  #videos {
+  display: none;
+}
 
 
 .video-grid {
