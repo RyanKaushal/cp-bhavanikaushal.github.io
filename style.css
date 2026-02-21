@@ -770,6 +770,7 @@ textarea {
 
 
 .whatsapp {
+  display: none;
 
   text-align: center;
 
