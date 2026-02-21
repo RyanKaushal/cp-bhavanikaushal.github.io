@@ -1099,18 +1099,16 @@ textarea {
 } */
 
 .schedule-btn {
-    display: inline-block;   /* change from block */
-    width: auto;             /* remove full width */
-    max-width: none;         /* remove restriction */
-    padding: 16px 30px;
+    flex: 1;                 /* makes both equal */
+    max-width: 300px;        /* controls max size */
+    text-align: center;
+    padding: 16px 20px;
     background-color: #0a67b3;
     color: #ffffff;
     font-size: 1.1rem;
     font-weight: 600;
-    text-align: center;
     text-decoration: none;
     border-radius: 50px;
-    border: none;
     cursor: pointer;
     box-shadow: 0 6px 18px rgba(10, 103, 179, 0.25);
     transition: all 0.25s ease;
