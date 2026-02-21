@@ -313,11 +313,21 @@ body {
 }
 
 /* BUTTONS */
-.hero-buttons {
+/* .hero-buttons {
+  
   display: grid-lanes;
   gap: 15px;
   margin-top: 40px;
+} */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* allows stacking on mobile */
 }
+
+
 
 .btn.primary {
   background: #2c7be5;
