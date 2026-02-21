@@ -1126,11 +1126,11 @@ textarea {
     padding: 16px 20px;
     /* background-color: #0a67b3; */
     background: transparent;
-    color: ##2c8ce8;
+    color: #2c8ce8;
     font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
-    /* border-radius: 50px; */
+    border-radius: 50px;
     cursor: pointer;
     box-shadow: 0 6px 18px rgba(10, 103, 179, 0.25);
     transition: all 0.25s ease;
