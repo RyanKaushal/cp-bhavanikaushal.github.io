@@ -10,6 +10,18 @@
 
 }
 
+.hero-description{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 20px;
+  background: #f7f7f7;
+  text-align: center;
+  flex-wrap: wrap;
+  
+}
+
+
 .stats-section {
   display: flex;
   justify-content: space-around;
