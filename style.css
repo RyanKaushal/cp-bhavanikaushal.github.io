@@ -756,11 +756,25 @@ iframe {
 }
 
 .contact .section-subtitle {
-  margin-bottom: 20px;
+  text-align: left;
 }
 
-.contact p {
-  line-height: 1.7;
+.contact p,
+.contact .map-link {
+  text-align: center;
+}
+
+.clinic-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .contact p {
+    padding: 0 15px;
+  }
 }
 
 
