@@ -471,16 +471,17 @@ h2 {
 .services {
   position: relative;
   background: 
-    /* linear-gradient(
+    linear-gradient(
       rgba(255, 255, 255, 0.85),
       rgba(255, 255, 255, 0.9)
-    ), */
+    ),
     url("images/services-background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 80px 20px;
 }
+
 
 .service-item {
   background: transparent;
