@@ -333,14 +333,14 @@ body {
   flex-wrap: wrap;   /* allows stacking */
   margin-top: 30px;
 } */
-.hero-buttons {
+/* .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-}
+} */
 
-/* .hero-buttons {
+.hero-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -352,7 +352,7 @@ body {
     font-weight: 500;
     background: transparent;
     transition: all 0.3s ease;
-} */
+}
 
 
 
