@@ -678,7 +678,7 @@ h2 {
 /* testing */
 
 .card {
-  display: contents;
+  /* display: contents; */
 
   background: #ffffff;
 
