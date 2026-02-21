@@ -444,9 +444,11 @@ h2 {
   text-align: center;
 
 }
-.services {
-  padding: 100px 0;
-  background: linear-gradient(to bottom, #f8fbfc, #eef5f6);
+services {
+  background-image: url('images/services-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .service-item {
