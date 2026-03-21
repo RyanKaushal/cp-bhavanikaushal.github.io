@@ -347,7 +347,7 @@ body {
 
 /* BUTTONS */
 .hero-buttons {
-  display: ruby-text;
+  display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;   /* allows stacking */
