@@ -15,6 +15,10 @@
   font-weight: 500;    /* optional: makes it more visible */
 }
 
+.hidden-card {
+  visibility: hidden;
+}
+
 .hero-description{
   display: block;
   justify-content: space-around;
