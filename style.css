@@ -173,11 +173,6 @@ body {
 }
 
 .navbar {
-  background: transparent;
-}
-
-
-.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -189,6 +184,13 @@ body {
 .logo img {
   height: 100px;   /* Fixed professional size */
   width: auto;
+  object-fit: contain;
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 /* NAV LINKS */
@@ -199,12 +201,20 @@ body {
   align-items: center;
   margin-left: auto;
 }
+.logo {
+  flex-shrink: 0;
+}
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: 0.3s ease;
+}
+
+/* Prevent nav from shrinking */
+.nav-links li {
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
