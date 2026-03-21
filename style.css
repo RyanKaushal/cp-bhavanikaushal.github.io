@@ -182,7 +182,7 @@ body {
 
 /* LOGO */
 .logo img {
-  height: 100px;   /* Fixed professional size */
+  height: 170px;   /* Fixed professional size */
   width: auto;
   object-fit: contain;
 }
