@@ -941,24 +941,24 @@ textarea {
 
 /* Modal Content Container */
 
+/* Modal Box */
 .modal-content {
-
   background: #ffffff;
-
-  border-radius: 12px;
-
-  width: 90%;
-
+  width: 100%;
   max-width: 800px;
-
   max-height: 80vh;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
+  border-radius: 16px;
+  padding: 30px 28px;
   position: relative;
 
+  /* Scroll */
+  overflow-y: auto;
+
+  /* Elegant shadow */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+  /* Smooth animation */
+  animation: modalFade 0.3s ease;
 }
 
 
