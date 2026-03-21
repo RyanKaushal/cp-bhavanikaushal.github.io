@@ -16,7 +16,7 @@
 }
 
 .hero-description{
-  display: flex;
+  display: block;
   justify-content: space-around;
   align-items: center;
   padding: 80px 20px;
