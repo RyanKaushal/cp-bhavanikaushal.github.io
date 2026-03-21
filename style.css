@@ -347,11 +347,11 @@ body {
 
 /* BUTTONS */
 .hero-buttons {
-  display: flex;
+  display: ruby-text;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;   /* allows stacking */
-  margin-top: 30px;
+  margin-top: 90px;
 }
 /* .hero-buttons {
   display: flex;
