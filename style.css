@@ -10,6 +10,11 @@
 
 }
 
+.hero-subtitle {
+  font-size: 1.5rem;   /* scalable */
+  font-weight: 500;    /* optional: makes it more visible */
+}
+
 .hero-description{
   display: flex;
   justify-content: space-around;
