@@ -409,7 +409,7 @@ body {
 }
 
 .hero-image img {
-  max-width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 12px;
   opacity: 0.95;
