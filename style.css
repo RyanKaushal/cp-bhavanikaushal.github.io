@@ -405,7 +405,8 @@ body {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;   /* allows stacking */
-  margin-top: 90px;
+  margin-top: 60px;
+  
 }
 /* .hero-buttons {
   display: flex;
