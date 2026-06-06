@@ -11,6 +11,22 @@
 }
 
 /*  */
+.contact-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #f8fbfd;
+  padding: 18px;
+  border-radius: 12px;
+  border-left: 4px solid #2c7be5;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  background: #eef6ff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
 .contact-card {
   background: #fff;
   max-width: 900px;
