@@ -560,13 +560,13 @@ h2 {
 
 .about p {
 
-  max-width: 800px;
+  max-width: 390px;
 
   margin: auto;
 
   margin-bottom: 1rem;
 
-  text-align: center;
+  text-align: -webkit-auto;
 
 }
 /* SERVICES SECTION */
