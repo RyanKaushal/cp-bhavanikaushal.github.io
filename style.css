@@ -924,6 +924,7 @@ iframe {
   }
 
   .appointment-card {
+    display: contents;
     padding: 25px 20px;
     border-radius: 12px;
   }
