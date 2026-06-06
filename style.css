@@ -477,7 +477,7 @@ section {
 
 h2 {
 
-  text-align: center;
+  text-align: -webkit-auto;
 
   margin-bottom: 2rem;
 
