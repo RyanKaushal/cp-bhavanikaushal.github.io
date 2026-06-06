@@ -916,7 +916,40 @@ iframe {
   justify-content: center;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
 
+  .appointment {
+    padding: 60px 15px;
+  }
+
+  .appointment-card {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  .appointment-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .appointment-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .schedule-btn {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    font-size: 1rem;
+    padding: 14px 18px;
+  }
+}
+.appointment-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 25px rgba(44,123,229,0.10);
+}
 /* //////////// */
 
 
