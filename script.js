@@ -36,23 +36,54 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ===============================
      Mobile Navbar Toggle
      =============================== */
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-  if (menuToggle && navLinks) {
+if (menuToggle && navLinks) {
 
-    navLinks.classList.remove("active");
+  navLinks.classList.remove("active");
 
-    menuToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
+  menuToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    navLinks.classList.toggle("active");
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
     });
+  });
 
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-      });
-    });
+  // Close menu when clicking anywhere else
+  document.addEventListener("click", function (e) {
+
+    if (
+      navLinks.classList.contains("active") &&
+      !navLinks.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ) {
+      navLinks.classList.remove("active");
+    }
+
+  });
+
+}
+@media (max-width: 768px) {
+
+  .nav-links {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
   }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+}
 // ========================
 // Video autoplay section
 // ========================
