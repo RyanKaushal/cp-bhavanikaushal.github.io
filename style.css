@@ -141,17 +141,28 @@ body {
 }
 @media (max-width: 768px) {
 
+  .title-image-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
   .about-wrapper {
     flex-direction: column;
     text-align: center;
   }
 
   .about-image img {
-    max-width: 280px;
-    margin-bottom: 2rem;
+    width: 220px;
+    max-width: 100%;
   }
+  .hero-title {
+        font-size: 2rem;
+    }
 
 }
+
+
 
 
 /*  */
@@ -161,6 +172,7 @@ body {
 /* ================= Book now button ================= */
 
 /* HERO BOOK BUTTON */
+
 
 .hero-book-btn {
   display: inline-block;
@@ -179,6 +191,7 @@ body {
   background: #2c7be5;
   color: #ffffff;
 }
+
 
 
 
