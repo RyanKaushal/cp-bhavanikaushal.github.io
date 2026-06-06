@@ -181,6 +181,11 @@ body {
       order: 1;
       flex: 0 0 100px;
   }
+
+    .hero-image img {
+      width: 100px;
+      height: auto;
+  }
   
   .about-wrapper {
     flex-direction: column;
@@ -189,7 +194,7 @@ body {
 
     .hero-title {
       order: 2;
-      text-align: left;
+      text-align: right;
       flex: 1;
   }
 
