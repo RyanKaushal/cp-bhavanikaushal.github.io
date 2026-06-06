@@ -173,8 +173,8 @@ body {
   .title-image-row {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      gap: 15px;
+      align-items: flex-start;
+      gap: 12px;
   }
 
     .hero-image {
@@ -194,8 +194,8 @@ body {
 
     .hero-title {
       order: 2;
-      text-align: right;
-      flex: 1;
+      text-align: left;
+      flex: 0.1;
   }
 
   .about-image img {
