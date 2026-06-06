@@ -895,6 +895,7 @@ iframe {
 }
 
 .appointment-card {
+  display: contents;
   background: #ffffff;
   max-width: 900px;
   margin: 0 auto;
