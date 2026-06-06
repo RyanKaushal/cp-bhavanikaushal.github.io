@@ -68,22 +68,6 @@ if (menuToggle && navLinks) {
   });
 
 }
-@media (max-width: 768px) {
-
-  .nav-links {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-  }
-
-  .nav-links.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-}
 // ========================
 // Video autoplay section
 // ========================
