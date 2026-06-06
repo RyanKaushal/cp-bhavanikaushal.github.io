@@ -53,7 +53,33 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+// ========================
+// Video autoplay section
+// ========================
+const video = document.getElementById("parentingVideo");
 
+if (video) {
+
+  const videoObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+
+    });
+
+  }, {
+    threshold: 0.5
+  });
+
+  videoObserver.observe(video);
+
+}
+  
 
   /* ===============================
      Services → Open Article in Modal
