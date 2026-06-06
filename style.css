@@ -171,14 +171,26 @@ body {
 @media (max-width: 768px) {
 
   .title-image-row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+  }
 
+    .hero-image {
+      order: 1;
+      flex: 0 0 100px;
+  }
+  
   .about-wrapper {
     flex-direction: column;
     text-align: center;
+  }
+
+    .hero-title {
+      order: 2;
+      text-align: left;
+      flex: 1;
   }
 
   .about-image img {
