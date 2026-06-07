@@ -213,7 +213,7 @@
 }
 
 .video-card video {
-    width: 55%;
+    width: 300px;
     border-radius: 12px;
     display: block;
 }
