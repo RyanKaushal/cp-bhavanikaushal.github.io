@@ -215,7 +215,7 @@
 .video-card video {
     display: block;
     width: 98%;
-    max-width: 600px; /* adjust as needed */
+    max-width: 350px; /* adjust as needed */
     margin: 0 auto;
     border-radius: 12px;
 }
