@@ -213,9 +213,11 @@
 }
 
 .video-card video {
-    width: 300px;
-    border-radius: 12px;
     display: block;
+    width: 98%;
+    max-width: 600px; /* adjust as needed */
+    margin: 0 auto;
+    border-radius: 12px;
 }
 
 @media (max-width: 768px) {
