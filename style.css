@@ -213,7 +213,7 @@
 }
 
 .video-card video {
-    width: 100%;
+    width: 30%;
     border-radius: 12px;
     display: block;
 }
@@ -1227,7 +1227,7 @@ textarea {
 
 /* Modal Box */
 .modal-content {
-  background: #ffffff;
+  background: #d5f1f2;
   width: 100%;
   max-width: 800px;
   max-height: 80vh;
