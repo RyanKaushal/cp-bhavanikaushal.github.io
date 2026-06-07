@@ -551,11 +551,11 @@ body {
 
 /* BUTTONS */
 .hero-buttons {
-  display: -webkit-inline-box;
+  display: grid;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;   /* allows stacking */
-  margin-top: 60px;
+  margin-top: 140px;
   
 }
 /* .hero-buttons {
