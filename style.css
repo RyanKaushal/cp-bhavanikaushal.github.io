@@ -171,7 +171,7 @@
 
 
 .stats-section {
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
   padding: 80px 20px;
