@@ -718,11 +718,8 @@ h2 {
 .about p {
 
   max-width: 355px;
-
-  margin: auto;
-
+  margin: revert;
   margin-bottom: 1rem;
-
   text-align: -webkit-auto;
 
 }
