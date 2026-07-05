@@ -18,20 +18,6 @@
     transition: all 0.3s ease;
   }
 
-  .about-text {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #555;
-    text-align: justify;
-    margin-bottom: 18px;
-}
-  @media (max-width: 768px) {
-    .about-text {
-        font-size: 1rem;
-        line-height: 1.7;
-        text-align: left;
-    }
-}
 
   .nav-links.active {
     opacity: 1;
