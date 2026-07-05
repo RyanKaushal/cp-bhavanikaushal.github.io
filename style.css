@@ -295,7 +295,7 @@ body {
 .about-image img {
   width: 100%;
   max-width: 400px;
-  border-radius: 12px;
+  border-radius: 200px;
 }
 
 .about-content {
