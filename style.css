@@ -644,6 +644,21 @@ body {
 }
 
 /* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    .about-row {
+        display: block;
+        gap: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        display: flex;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+}
 
 @media (max-width: 768px) {
 
