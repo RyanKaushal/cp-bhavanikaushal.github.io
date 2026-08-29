@@ -314,7 +314,7 @@ body {
 .about-content p,
 .about-content ul,
 .about-content h4 {
-    margin-left: 0;
+    margin-left: 60;
 }
 @media (max-width: 768px) {
 
