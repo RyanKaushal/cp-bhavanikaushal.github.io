@@ -652,6 +652,15 @@ body {
     }
 
     .about-image {
+        display: none;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+}
+
+    .about-image {
         display: flex;
     }
 
