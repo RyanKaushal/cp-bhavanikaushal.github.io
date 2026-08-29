@@ -308,6 +308,7 @@ body {
 }
 
 .about-content{
+  margin: 60px; 
     flex:1;
 }
 
