@@ -306,7 +306,7 @@ body {
     display: block;
     border-radius: 18px;
 }
-.about-image img_1 {
+.about-image img.img_1 {
     width: 150%;
     max-width: 450px;
     height: auto;
