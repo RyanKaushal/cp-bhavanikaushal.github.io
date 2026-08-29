@@ -668,6 +668,11 @@ body {
         width: 100%;
     }
 }
+@media (max-width: 768px) {
+    img.img_1 {
+        display: none !important;
+    }
+}
 
 @media (max-width: 768px) {
 
