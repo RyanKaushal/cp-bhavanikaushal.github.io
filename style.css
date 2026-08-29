@@ -306,6 +306,13 @@ body {
     display: block;
     border-radius: 18px;
 }
+.about-image img_1 {
+    width: 150%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+}
 
 .about-content{
   margin: 60px; 
