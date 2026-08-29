@@ -1596,8 +1596,8 @@ textarea {
 }
 .about-row{
     display:flex;
-    align-items:flex-start;
-    gap:60px;
+    align-items: center;
+    gap:300px;
     margin-bottom:70px;
 }
 .about-row.reverse{
