@@ -339,6 +339,14 @@ h2 {
   border-radius: 18px;
 }
 
+.about-image img.img_2 {
+  width: 150%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+
 .about-content {
   flex: 1;
   margin: 60px;
@@ -1124,6 +1132,10 @@ textarea {
 
   .about-image img.img_1,
   img.img_1 {
+    display: none !important;
+  }
+    .about-image img.img_2,
+  img.img_2 {
     display: none !important;
   }
 
