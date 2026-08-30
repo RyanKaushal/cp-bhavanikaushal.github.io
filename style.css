@@ -1289,7 +1289,7 @@ textarea {
   }
 
   .schedule-btn {
-    width: 100%;
+    width: auto;
     max-width: 100%;
     margin: 10px auto;
     padding: 12px 30px;
